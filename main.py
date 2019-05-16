@@ -45,11 +45,6 @@ lmain = tk.Label(root)
 lmain.pack()
 label = tk.Label(text="Apple",fg="red",font=("Helvetica", 30, "bold"))
 
-def get_img():
-	_, img = cap.read()
-	frame = cv2.imencode('.jpg', img)[1].tobytes()
-	yield (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
-
 def show_frame():
 	_, frame = cap.read()
 	frame = cv2.resize(frame, dsize=(560, 400))
