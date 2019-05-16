@@ -31,7 +31,7 @@ def network(x, y, test=False):
     return h
 
 # nnlabla初期化
-nn.load_parameters('aresults.nnp')
+nn.load_parameters('results.nnp')
 x=nn.Variable((1,3,64,64))
 IMAGE_SIZE = 64
 
